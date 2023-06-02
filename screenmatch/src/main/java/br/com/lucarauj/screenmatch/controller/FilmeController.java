@@ -31,9 +31,7 @@ public class FilmeController {
         var filme = new Filme(dadosCadastroFilme);
         filmes.add(filme);
 
-        System.out.println(filmes);
-
-        return "filmes/formulario";
+        return "redirect:/filmes";
     }
 
 //    @PutMapping
