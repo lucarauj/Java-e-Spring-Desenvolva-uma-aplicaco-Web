@@ -3,6 +3,7 @@ package br.com.lucarauj.screenmatch.controller;
 import br.com.lucarauj.screenmatch.domain.filme.DadosCadastroFilme;
 import br.com.lucarauj.screenmatch.domain.filme.Filme;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -20,7 +21,8 @@ public class FilmeController {
     }
 
     @GetMapping
-    public String carregaPaginaListagem() {
+    public String carregaPaginaListagem(Model model) {
+        model.addAttribute("lista", filmes);
         return "filmes/listagem";
     }
 
