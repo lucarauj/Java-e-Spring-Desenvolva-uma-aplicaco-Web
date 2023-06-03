@@ -40,5 +40,10 @@ public class FilmeController {
 //    @PutMapping
 
 
-//    @DeleteMapping
+    @DeleteMapping
+    public String removeFilme(Long id) {
+        filmeRepository.deleteById(id);
+
+        return "redirect:/filmes";
+    }
 }

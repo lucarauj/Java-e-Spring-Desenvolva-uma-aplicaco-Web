@@ -67,6 +67,11 @@ create table filmes(
 );
 ```
 
+### spring.mvc.hiddenmethod.filter:
+
+- Intercepta as requisições e examina o corpo da requisição em busca desse parâmetro oculto, que normalmente é chamado "_method";
+- Útil em uma requisição que não seja GET ou POST, que são as padrões suportadas no html ao utilizar a tag form method;
+
 
 
 
@@ -79,15 +84,16 @@ create table filmes(
 - @PostMapping
 - @Entity
 - @Table
+- @Id
 - @GeneratedValue(strategy = GenerationType.IDENTITY)
 - @Autowired
-
+- @DeleteMapping
 
 
 - @Service
 - @RequestParam
 - @PathVariable
-- @DeleteMapping
+
 - @PutMapping
 - @Service
 
