@@ -5,7 +5,7 @@ Java e Spring: desenvolva sua primeira aplicação Web
 - Spring
 - Thymeleaf
 - JPA
-- MySQL (PostgreSQL)
+- MySQL 👉 PostgreSQL
 
 ## Dependências:
 
@@ -13,6 +13,8 @@ Java e Spring: desenvolva sua primeira aplicação Web
 - Spring Web
 - Thymeleaf
 - Thymeleaf Layout Dialect
+- PostgreSQL Driver
+- Spring Data JPA
 
 ## Maven:
 
@@ -30,13 +32,42 @@ Java e Spring: desenvolva sua primeira aplicação Web
 - Padrão de arquitetura de software comumente usado em projetos Java e em frameworks como o Spring. 
 - Visa separar a lógica de negócios da interface do usuário, promovendo uma melhor organização e manutenção do código.
 
-## Localização de código HTML em Projetos Java/Spring:
+## Localização do arquivo HTML no Projeto:
 
-- srs -> main -> resources -> templates 
+- srs -> main -> resources -> templates
+
+## Localização do arquivo CSS no Projeto:
+
+- srs -> main -> resources -> static  
 
 ## Record:
 
 - Representa uma classe imutável, contendo apenas atributos, construtor e métodos de leitura;
+
+## Binding | Vinculação de dados:
+
+- Técnica em que os valores fornecidos pelos usuários em um formulário HTML são automaticamente mapeados para objetos Java no lado do servidor;
+
+## @GeneratedValue:
+
+- GenerationType.AUTO: estratégia padrão. A JPA escolhe a estratégia de geração mais apropriada com base no banco de dados configurado para a aplicação;
+- GenerationType.IDENTITY: usada quando o banco de dados suporta colunas autoincrementais, como AUTO_INCREMENT no MySQL ou IDENTITY no SQL Server;
+- GenerationType.SEQUENCE: usa uma sequência no banco de dados para gerar os valores dos identificadores. Pode ser necessário adicionar outra anotação: @SequenceGenerator(name = "nomeSequencia", sequenceName = "nome_sequencia", allocationSize = 1);
+- GenerationType.TABLE: utiliza uma tabela especial de banco de dados para gerar os valores dos identificadores. A JPA cria uma tabela exclusiva no banco de dados para armazenar e gerenciar esses valores. Essa estratégia pode ser útil quando o banco de dados não suporta sequências ou identificadores automáticos, sendo necessário adicionar a seguinte anotação: @TableGenerator(name = "nomeGerador", table = "nome_tabela", pkColumnName = "chave", valueColumnName = "valor", allocationSize = 1);
+
+## Criando uma tabela:
+
+```
+create table filmes(
+  id bigserial primary key,
+  nome varchar(100) not null,
+  duracao_em_minutos integer not null,
+  ano_lancamento integer not null,
+  genero varchar(100)
+);
+```
+
+
 
 
 
@@ -46,14 +77,17 @@ Java e Spring: desenvolva sua primeira aplicação Web
 - @RequestMapping
 - @GetMapping
 - @PostMapping
+- @Entity
+- @Table
+- @GeneratedValue(strategy = GenerationType.IDENTITY)
+- @Autowired
 
 
-- @Repository
+
 - @Service
 - @RequestParam
 - @PathVariable
 - @DeleteMapping
 - @PutMapping
 - @Service
-- @Autowired
-- @Entity
+
