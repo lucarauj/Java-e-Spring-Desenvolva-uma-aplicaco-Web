@@ -1,11 +1,20 @@
-Java e Spring: desenvolva sua primeira aplicação Web
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/lucarauj/Java-e-Spring-Desenvolva-uma-aplicaco-Web/blob/main/LICENSE)
+
+<h1 align="center">Java e Spring:</h1>
+<h2 align="center">Desenvolva sua primeira aplicação Web</h2>
+
+<p align="center"><img width="200px" src="https://github.com/lucarauj/assets/blob/main/ApiJavaSpring.png" /></p>
+
+<br>
+
+## Abordagens:
 
 - CRUD
 - Maven
 - Spring
 - Thymeleaf
 - JPA
-- MySQL 👉 PostgreSQL
+- PostgreSQL
 
 <br>
 
@@ -17,6 +26,20 @@ Java e Spring: desenvolva sua primeira aplicação Web
 - Thymeleaf Layout Dialect
 - PostgreSQL Driver
 - Spring Data JPA
+
+<br>
+
+## Layout:
+
+### Cadastro de Filmes
+
+<img width="800px" src="https://github.com/lucarauj/Java-e-Spring-Desenvolva-uma-aplicaco-Web/blob/main/images/cadastro%20de%20filmes.png"/>
+
+<br>
+
+### Lista de Filmes
+
+<img width="800px" src="https://github.com/lucarauj/Java-e-Spring-Desenvolva-uma-aplicaco-Web/blob/main/images/lista%20de%20filmes.png"/>
 
 <br>
 
@@ -98,19 +121,23 @@ create table filmes(
 
 ## Anotações:
 
-- @Controller
-- @RequestMapping
-- @GetMapping
-- @PostMapping
-- @Entity
-- @Table
-- @Id
-- @GeneratedValue(strategy = GenerationType.IDENTITY)
-- @Autowired
-- @DeleteMapping
-- @PutMapping
-- @Transactional
+- @Autowired: delega ao Spring Boot a inicialização do objeto;
+- @Controller: usada para marcar classes como Spring MVC Controller;
+- @DeleteMapping: usada para mapear solicitações HTTP DELETE em métodos manipuladores específicos;
+- @Entity: utilizada para informar que uma classe também é uma entidade;
+- @GetMapping: usada para mapear solicitações HTTP GET em métodos manipuladores específicos;
+- @GeneratedValue(strategy = GenerationType.IDENTITY): informama ao provedor de persistência que os valores a serem atribuídos ao identificador único serão gerados pela coluna de auto incremento do banco de dados;
+- @Id: especifica o identificador da entidade, que é usado ao carregar a entidade em um determinado contexto de persistência;
+- @PostMapping: usada para mapear solicitações HTTP POST em métodos específicos de manipulador;
+- @PutMapping: usada para mapear solicitações HTTP PUT em métodos manipuladores específicos;
+- @RequestMapping: usada para mapear solicitações da web para classes manipuladoras específicas e métodos manipuladores;
+- @Transactional: utilizada nos métodos que executam uma transação, como salvar, editar, excluir;
+- @Table: usada para especificar a tabela principal da entidade atualmente anotada;
 
 <br>
 
-## Aluno
+## 👨‍🎓 Aluno
+
+#### Lucas Araujo
+
+<a href="https://www.linkedin.com/in/lucarauj"><img alt="lucarauj | LinkdeIN" width="40px" src="https://user-images.githubusercontent.com/43545812/144035037-0f415fc7-9f96-4517-a370-ccc6e78a714b.png" /></a>
